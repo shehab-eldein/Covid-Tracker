@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m5L-bU-LJm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Nfx-Fn-umg">
+            <objects>
+                <viewController id="C67-sZ-VXi" customClass="ViewController" customModule="COVID_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wh0-ag-Kjd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covid BG" translatesAutoresizingMaskIntoConstraints="NO" id="iGR-Hp-sk1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covidIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ylr-bs-SN2">
+                                <rect key="frame" x="124" y="88" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ylr-bs-SN2" secondAttribute="height" multiplier="1:1" id="nrD-EC-Jbr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd8-XX-wqw">
+                                <rect key="frame" x="112" y="254" width="90" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.084977485239999997" green="0.51656651499999995" blue="0.75689518450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRACKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u03-t0-BAl">
+                                <rect key="frame" x="209" y="254" width="130" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.084977485239999997" green="0.51656651499999995" blue="0.75689518450000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaZ-k6-xGZ">
+                                <rect key="frame" x="12" y="377" width="327" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Get statistics for all countries">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="allStatisticsTapped:" destination="C67-sZ-VXi" eventType="touchUpInside" id="DUZ-Cy-k5R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtD-EE-7a4">
+                                <rect key="frame" x="12" y="471" width="327" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Get statistics for Country">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="countryStatistecsTapped:" destination="C67-sZ-VXi" eventType="touchUpInside" id="Niq-L6-Nog"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yMZ-at-P0G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u03-t0-BAl" firstAttribute="leading" secondItem="Sd8-XX-wqw" secondAttribute="trailing" constant="7" id="2LU-Si-zgr"/>
+                            <constraint firstItem="ZaZ-k6-xGZ" firstAttribute="leading" secondItem="Sd8-XX-wqw" secondAttribute="leading" constant="-100" id="5qE-8k-XUn"/>
+                            <constraint firstItem="iGR-Hp-sk1" firstAttribute="top" secondItem="yMZ-at-P0G" secondAttribute="top" id="6V4-Yg-UUK"/>
+                            <constraint firstItem="Ylr-bs-SN2" firstAttribute="centerX" secondItem="iGR-Hp-sk1" secondAttribute="centerX" id="7p4-0d-G2M"/>
+                            <constraint firstItem="Sd8-XX-wqw" firstAttribute="leading" secondItem="Ylr-bs-SN2" secondAttribute="leading" constant="-12" id="96u-OF-M8W"/>
+                            <constraint firstItem="ZaZ-k6-xGZ" firstAttribute="trailing" secondItem="u03-t0-BAl" secondAttribute="trailing" id="9D2-BD-6Vl"/>
+                            <constraint firstItem="Ylr-bs-SN2" firstAttribute="top" secondItem="iGR-Hp-sk1" secondAttribute="top" id="GtJ-UY-zbr"/>
+                            <constraint firstItem="yMZ-at-P0G" firstAttribute="bottom" secondItem="iGR-Hp-sk1" secondAttribute="bottom" id="Q9a-JX-stg"/>
+                            <constraint firstItem="Ylr-bs-SN2" firstAttribute="width" secondItem="iGR-Hp-sk1" secondAttribute="width" multiplier="0.400966" id="U6f-EO-uTD"/>
+                            <constraint firstItem="Sd8-XX-wqw" firstAttribute="top" secondItem="Ylr-bs-SN2" secondAttribute="bottom" id="YfN-Z6-9CT"/>
+                            <constraint firstItem="iGR-Hp-sk1" firstAttribute="leading" secondItem="yMZ-at-P0G" secondAttribute="leading" id="ZGn-mn-f8s"/>
+                            <constraint firstItem="OtD-EE-7a4" firstAttribute="trailing" secondItem="ZaZ-k6-xGZ" secondAttribute="trailing" id="bJS-vW-BS1"/>
+                            <constraint firstItem="OtD-EE-7a4" firstAttribute="top" secondItem="ZaZ-k6-xGZ" secondAttribute="bottom" constant="52" id="elc-sz-H3B"/>
+                            <constraint firstItem="OtD-EE-7a4" firstAttribute="leading" secondItem="ZaZ-k6-xGZ" secondAttribute="leading" id="faH-7E-sfl"/>
+                            <constraint firstItem="ZaZ-k6-xGZ" firstAttribute="top" secondItem="Sd8-XX-wqw" secondAttribute="bottom" constant="87" id="k2C-93-pgv"/>
+                            <constraint firstItem="yMZ-at-P0G" firstAttribute="trailing" secondItem="iGR-Hp-sk1" secondAttribute="trailing" id="kUj-Cd-5na"/>
+                            <constraint firstItem="u03-t0-BAl" firstAttribute="top" secondItem="Sd8-XX-wqw" secondAttribute="bottom" constant="-36" id="tA2-0h-8lH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="es1-lq-olB"/>
+                    <connections>
+                        <outlet property="allStatisticsBtn" destination="ZaZ-k6-xGZ" id="UB2-PR-zUn"/>
+                        <outlet property="countryStatisticsBtn" destination="OtD-EE-7a4" id="sYY-Cz-heE"/>
+                        <outlet property="covidIcon" destination="Ylr-bs-SN2" id="LGW-2x-IBN"/>
+                        <outlet property="covidLabel" destination="Sd8-XX-wqw" id="dd6-nM-8vg"/>
+                        <outlet property="trackerLabel" destination="u03-t0-BAl" id="Pqw-hu-QNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKv-zM-czQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428.985507246377" y="75.669642857142847"/>
+        </scene>
+        <!--All CountryVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AllCountryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="AllCountryVC" customModule="COVID_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="infoCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iO0-na-wYK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iO0-na-wYK" secondAttribute="bottom" id="GEN-be-F0q"/>
+                            <constraint firstItem="iO0-na-wYK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oLm-co-dmB"/>
+                            <constraint firstItem="iO0-na-wYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="upn-qn-ulx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iO0-na-wYK" secondAttribute="trailing" id="ypA-az-85A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VGe-PS-Xyu"/>
+                    <connections>
+                        <outlet property="tabelView" destination="iO0-na-wYK" id="6KH-mI-BQK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="-457.36607142857139"/>
+        </scene>
+        <!--Search CountryVC-->
+        <scene sceneID="PD6-57-afn">
+            <objects>
+                <viewController restorationIdentifier="SearchCountryVC" storyboardIdentifier="SearchCountryVC" id="n79-t8-AMV" customClass="SearchCountryVC" customModule="COVID_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZEt-nT-HRd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-aE-a2p">
+                                <rect key="frame" x="0.0" y="49" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="M7C-yy-SSu">
+                                <rect key="frame" x="0.0" y="105" width="414" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bfm-95-i5f"/>
+                                </constraints>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uyc-hA-Ys7">
+                                <rect key="frame" x="0.0" y="185" width="414" height="677"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BWg-Gs-kIY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0cU-aE-a2p" firstAttribute="leading" secondItem="BWg-Gs-kIY" secondAttribute="leading" id="0WN-2N-YZC"/>
+                            <constraint firstItem="M7C-yy-SSu" firstAttribute="top" secondItem="0cU-aE-a2p" secondAttribute="bottom" id="AH8-Ac-VHv"/>
+                            <constraint firstItem="M7C-yy-SSu" firstAttribute="leading" secondItem="0cU-aE-a2p" secondAttribute="leading" id="aJE-o6-dyi"/>
+                            <constraint firstItem="Uyc-hA-Ys7" firstAttribute="trailing" secondItem="M7C-yy-SSu" secondAttribute="trailing" id="aaa-hH-FYh"/>
+                            <constraint firstItem="M7C-yy-SSu" firstAttribute="trailing" secondItem="0cU-aE-a2p" secondAttribute="trailing" id="fkx-Ao-BAX"/>
+                            <constraint firstItem="Uyc-hA-Ys7" firstAttribute="top" secondItem="M7C-yy-SSu" secondAttribute="bottom" id="mDh-6g-Fij"/>
+                            <constraint firstItem="0cU-aE-a2p" firstAttribute="top" secondItem="BWg-Gs-kIY" secondAttribute="top" constant="5" id="oRM-Zd-U3B"/>
+                            <constraint firstItem="Uyc-hA-Ys7" firstAttribute="leading" secondItem="M7C-yy-SSu" secondAttribute="leading" id="p5D-lF-zVx"/>
+                            <constraint firstItem="BWg-Gs-kIY" firstAttribute="trailing" secondItem="0cU-aE-a2p" secondAttribute="trailing" id="ud9-k5-2gc"/>
+                            <constraint firstItem="BWg-Gs-kIY" firstAttribute="bottom" secondItem="Uyc-hA-Ys7" secondAttribute="bottom" id="xyi-hs-kcO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pv2-M9-Cjh"/>
+                    <connections>
+                        <outlet property="datePicker" destination="M7C-yy-SSu" id="DQO-IY-5KJ"/>
+                        <outlet property="searchBar" destination="0cU-aE-a2p" id="hOL-pG-aU1"/>
+                        <outlet property="tabelView" destination="Uyc-hA-Ys7" id="pw6-cQ-ptB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qn9-hg-UUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="340.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sJw-Zl-myZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m5L-bU-LJm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RcE-6v-lif">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C67-sZ-VXi" kind="relationship" relationship="rootViewController" id="Xf3-1I-ehe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUe-JY-nB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518.84057971014499" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="covid BG" width="494" height="349"/>
+        <image name="covidIcon" width="240" height="240"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
